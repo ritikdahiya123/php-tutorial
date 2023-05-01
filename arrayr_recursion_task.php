@@ -71,6 +71,20 @@ $arr=array(
 //     }
 
 // }
+function rec($arr){
+    foreach($arr as $k => $v){
+        $s=gettype($v);
+        if($s=='array'){
+        rec($v);
+        }
+        else{
+            echo $v;
+            echo ",";
+        }
+    }
+
+}
+rec($arr);
 
 
 ?>
